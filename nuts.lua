@@ -21,12 +21,21 @@ function ball:update(dt)
 end
 
 function ball:collide()
-    --checks collision 
+    --checks collision for player 
     if collision(self, player) then
         self.xVelocity = self.speed
         local middle_ball = self.y + self.height/2 --middle point of the ball
         local middle_player = player.y + player.height/2 --middle point of the player
         local collision_position = middle_ball - middle_player 
+        self.yVelocity = collision_position * 7
+    end
+
+    --check colision for bot
+    if collision(self, bot) then
+        self.xVelocity = -self.speed
+        local middle_ball = self.y + self.height/2 --middle point of the ball
+        local middle_bot = bot.y + bot.height/2 --middle point of the player
+        local collision_position = middle_ball - middle_bot
         self.yVelocity = collision_position * 7
     end
 

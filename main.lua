@@ -3,20 +3,24 @@
 --import files for game 
 require("player")
 require("nuts") --deezzz nuts 
+require("bot")
 
 function love.load()
     player:load()
     ball:load()
+    bot:load()
 end
 
 function love.update(dt)
     player:update(dt)
     ball:update(dt)
+    bot:update(dt)
 end
 
 function love.draw()
     player:draw()
     ball:draw()
+    bot:draw()
 end
 
 --checking collision between bodies
