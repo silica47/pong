@@ -47,6 +47,21 @@ function ball:collide()
         self.y = love.graphics.getHeight() - self.height
         self.yVelocity = -self.yVelocity
     end
+
+    --put ball to the middle after someone score
+    if self.x < 0 then
+        self.x = love.graphics.getWidth() / 2 - self.width / 2
+        self.y = love.graphics.getHeight() / 2 - self.height / 2
+        self.yVelocity = 0
+        self.xVelocity = self.speed
+    end
+
+    if self.x + self.width > love.graphics.getWidth() then
+        self.x = love.graphics.getWidth() /2 - self.width / 2
+        self.y = love.graphics.getHeight() / 2 - self.height / 2
+        self.yVelocity = 0
+        self.xVelocity = -self.speed
+    end
 end
 
 function ball:draw()
