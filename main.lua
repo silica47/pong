@@ -1,4 +1,4 @@
--- written in love by love :) -Surya
+-- Written with LOVE
 
 --import files for game 
 require("player")
@@ -9,6 +9,8 @@ function love.load()
     player:load()
     ball:load()
     bot:load()
+    score = {player = 0, bot = 0}
+    font = love.graphics.newFont(50)
 end
 
 function love.update(dt)
@@ -21,6 +23,8 @@ function love.draw()
     player:draw()
     ball:draw()
     bot:draw()
+    love.graphics.print("Score: "..score.player, 50,50)
+    love.graphics.print("Score: "..score.bot, 1000,50)
 end
 
 --checking collision between bodies

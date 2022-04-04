@@ -54,6 +54,7 @@ function ball:collide()
         self.y = love.graphics.getHeight() / 2 - self.height / 2
         self.yVelocity = 0
         self.xVelocity = self.speed
+        score.bot = score.bot + 1
     end
 
     if self.x + self.width > love.graphics.getWidth() then
@@ -61,6 +62,7 @@ function ball:collide()
         self.y = love.graphics.getHeight() / 2 - self.height / 2
         self.yVelocity = 0
         self.xVelocity = -self.speed
+        score.player = score.player + 1
     end
 end
 
