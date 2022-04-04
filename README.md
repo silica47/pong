@@ -1,5 +1,5 @@
 # PONG
->A simple pong game written in Lua using the Love2D framework that comes with an inbuilt bot
+>A simple pong game written in Lua using the Love2D framework. It comes with an inbuilt bot
 
 ***
 
