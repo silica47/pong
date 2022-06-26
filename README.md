@@ -12,7 +12,7 @@
 
 ## Installing Pong 
 ```
-git clone https://github.com/dogemon/pong
+git clone https://github.com/silica47/pong
 cd pong
 love .
 ```
